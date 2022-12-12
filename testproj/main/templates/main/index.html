@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<h2>Generally Page</h2>
+{% for el in tasks %}
+<div class="alert-warning mt-2">
+    <h2>{{ el.title }}</h2>
+</div>
+{% endfor %}
+{% endblock %}
