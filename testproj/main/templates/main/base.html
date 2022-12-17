@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
+    {% block css_add %}{% endblock %}
 </head>
 <body>
-<div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
-    <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-        <span class="fs-4">Python PJ</span>
+<div>
+    <a href="/">
+        <span>Python PJ</span>
     </a>
 
-    <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-        <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'home' %}">Generally page</a>
-        <a class="me-3 py-2 text-dark text-decoration-none" href="/about">About</a>
-        <a class="me-3 py-2 text-dark text-decoration-none" href="/create">Create Task</a>
+    <nav>
+        <a href="{% url 'home' %}">Generally page</a>
+        <a href="/about">About</a>
+        <a href="/create">Create Task</a>
     </nav>
 </div>
 
